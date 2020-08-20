@@ -13,5 +13,14 @@ public class CallWebDriverFactory {
         String title=driver.getTitle();
 
         System.out.println("title = " + title);
+
+        driver.get("https://facebook.com");
+
+        String title1 = driver.getTitle();
+
+        System.out.println("title1 = " + title1);
+
+        driver.close();
+
     }
 }
