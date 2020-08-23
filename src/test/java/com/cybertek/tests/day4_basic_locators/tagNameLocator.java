@@ -16,9 +16,11 @@ public class tagNameLocator {
 
         fullNameInputBox.sendKeys("Mike Smith");
 
-        WebElement emailBox = driver.findElement(By.tagName("input[1]"));
+        WebElement emailBox = driver.findElement(By.name("email"));
 
         emailBox.sendKeys("MikeSmith@gmail.com");
+
+        driver.findElement(By.tagName("button")).click();
         driver.close();
     }
 }
