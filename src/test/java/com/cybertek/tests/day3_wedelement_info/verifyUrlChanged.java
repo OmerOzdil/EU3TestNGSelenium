@@ -12,7 +12,7 @@ public class verifyUrlChanged {
         /*
         Verify URL changed
             - open browser
-            - go to http://practice.cybertekschool.com/forgot_passwordLinks to an external site.
+            - go to http://practice.cybertekschool.com/forgot_password Links to an external site.
             - enter any email
             - click on Retrieve password
             - verify that url changed to http://practice.cybertekschool.com/email_sent
