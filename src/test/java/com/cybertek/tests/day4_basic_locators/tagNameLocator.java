@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.sql.Driver;
-
 public class tagNameLocator {
     public static void main(String[] args) {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -22,7 +20,5 @@ public class tagNameLocator {
 
         driver.findElement(By.tagName("button")).click();
         driver.close();
-
-        System.out.println("I added new stuff here to be seen in the GitHub");
     }
 }
