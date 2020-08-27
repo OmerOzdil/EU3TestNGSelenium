@@ -22,5 +22,7 @@ public class tagNameLocator {
 
         driver.findElement(By.tagName("button")).click();
         driver.close();
+
+        System.out.println("I added new stuff here to be seen in the GitHub");
     }
 }
