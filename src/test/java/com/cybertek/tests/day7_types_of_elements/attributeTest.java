@@ -22,5 +22,10 @@ public class attributeTest {
         System.out.println(blueRadioButton.getAttribute("name"));
 
         System.out.println(blueRadioButton.getAttribute("checked"));
+
+        System.out.println(blueRadioButton.getAttribute("href"));
+
+        System.out.println(blueRadioButton.getAttribute("outerHTML"));
+
     }
 }
