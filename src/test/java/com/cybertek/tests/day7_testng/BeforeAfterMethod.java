@@ -12,7 +12,7 @@ public class BeforeAfterMethod {
     @AfterClass
     public void tearDownClas(){
         System.out.println("AFTER CLASS");
-        System.out.println("executed one time after class");
+        System.out.println("Some Reporting Code Here");
 
     }
 
