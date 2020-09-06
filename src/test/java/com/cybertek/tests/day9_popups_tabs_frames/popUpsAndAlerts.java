@@ -48,5 +48,10 @@ public class popUpsAndAlerts {
         // click for JS confirm
         driver.findElement(By.xpath("//button[2]")).click();
         alert.dismiss();
+
+        // click for JS prompt
+        driver.findElement(By.xpath("//button[3]")).click();
+        alert.sendKeys("Omer Ozdil");
+        alert.accept();
     }
 }
