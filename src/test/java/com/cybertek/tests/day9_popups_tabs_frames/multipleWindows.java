@@ -80,6 +80,6 @@ public class multipleWindows {
             }
         }
         System.out.println("After Switch: "+ driver.getTitle());
-
     }
+
 }
