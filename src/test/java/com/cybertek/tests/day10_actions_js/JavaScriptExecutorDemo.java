@@ -56,6 +56,27 @@ public class JavaScriptExecutorDemo {
             jse.executeScript("window.scrollBy(0,250)");
 
         }
+        for (int i = 0; i < 10; i++) {
+            Thread.sleep(1000);
+            jse.executeScript("window.scrollBy(0,-250)");
+
+
+        }
+
+
+
+    }
+    @Test
+    public void scrollToElement() throws InterruptedException {
+        driver.get("http://practice.cybertekschool.com/");
+
+        WebElement element = driver.findElement(By.xpath("//a[.='Radio Buttons']"));
+        Thread.sleep(2000);
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+
+        jse.executeScript("arguments[0].scrollIntoView(true);", element);
+        element.click();
+
 
     }
 }
