@@ -76,7 +76,5 @@ public class JavaScriptExecutorDemo {
 
         jse.executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
-
-
     }
 }
