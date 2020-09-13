@@ -63,7 +63,6 @@ public class explicitWaitExample {
 
         usernameBox.sendKeys("Omer Ozdil");
 
-        System.out.println("This is newly added for only test purposes");
 
 
     }
