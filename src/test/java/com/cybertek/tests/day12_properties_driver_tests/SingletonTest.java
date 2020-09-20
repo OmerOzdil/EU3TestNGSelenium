@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class SingletonTest {
-    @Test
+    //@Test
     public void test1(){
         String s1 = Singleton.getInstance();
         String s2 = Singleton.getInstance();
@@ -18,6 +18,21 @@ public class SingletonTest {
         System.out.println(System.getProperty("os.name"));
 
         driver.get(ConfigurationReader.get("url"));
+
+    }
+    @Test
+    public void test2() throws InterruptedException {
+        WebDriver driver= Driver.get();
+        Thread.sleep(2000);
+        driver.get("https://www.google.com");
+
+        Driver.closeDriver();
+
+    }
+    @Test
+    public void test3(){
+        WebDriver driver= Driver.get();
+        driver.get("https://www.amazon.com");
 
 
     }
