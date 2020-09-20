@@ -59,12 +59,7 @@ public class JavaScriptExecutorDemo {
         for (int i = 0; i < 10; i++) {
             Thread.sleep(1000);
             jse.executeScript("window.scrollBy(0,-250)");
-
-
         }
-
-
-
     }
     @Test
     public void scrollToElement() throws InterruptedException {
