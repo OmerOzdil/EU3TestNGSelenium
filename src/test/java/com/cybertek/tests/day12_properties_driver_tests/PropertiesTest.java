@@ -31,5 +31,5 @@ public class PropertiesTest {
         driver.findElement(By.id("prependedInput")).sendKeys(username);
         driver.findElement(By.id("prependedInput2")).sendKeys(password + Keys.ENTER);
     }
-
+    
 }

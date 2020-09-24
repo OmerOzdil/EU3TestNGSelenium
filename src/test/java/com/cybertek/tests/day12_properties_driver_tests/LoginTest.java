@@ -18,7 +18,6 @@ public class LoginTest extends TestBase {
     @Test
     public void OpenBrowserWithConf(){
 
-
         driver.get(ConfigurationReader.get("url"));
 
         String username = ConfigurationReader.get("driver_username");
