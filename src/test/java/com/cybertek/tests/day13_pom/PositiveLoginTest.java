@@ -35,7 +35,7 @@ public class PositiveLoginTest extends TestBase {
         loginPage.login(username,password);
 
         Assert.assertEquals(driver.getCurrentUrl(),"https://qa1.vytrack.com/");
-
+        loginPage.logOutLink.click();
     }
     @Test
     public void loginAsStoreManager2(){
