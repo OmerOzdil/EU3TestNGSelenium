@@ -38,5 +38,11 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(ConfigurationReader.get("driver_password"));
         loginButton.click();
     }
+    public void loginAsSalesManager(){
+        usernameInput.sendKeys(ConfigurationReader.get("salesmanager_username"));
+        passwordInput.sendKeys(ConfigurationReader.get("salesmanager_password"));
+        loginButton.click();
+    }
+
 
 }
