@@ -5,8 +5,8 @@ import com.cybertek.pages.DashBoardPage;
 import com.cybertek.pages.LoginPage;
 import com.cybertek.tests.TestBase;
 import com.cybertek.utilities.BrowserUtils;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class verifyTheInfo extends TestBase {
@@ -22,39 +22,58 @@ public class verifyTheInfo extends TestBase {
      * verify that phone number is +18982323434
      */
 
+    @Ignore
     @Test
-    public void test1(){
+    public void TC(){
 
-        extentLogger = report.createTest("Check details");
+        //Name the project
+        extentLogger = report.createTest("Check Details");
 
+        //create an object from LoginPage
         LoginPage loginPage = new LoginPage();
         extentLogger.info("Login as Sales Manager");
+
+        //Login as SalesManager
         loginPage.loginAsSalesManager();
 
+        //Create an object from The Dashboard.
         DashBoardPage dashBoardPage = new DashBoardPage();
 
 
-        extentLogger.info("Navigate to the Contacts page");
+        //Navigate to customer and Contact Page.
         dashBoardPage.navigateToModule("Customers","Contacts");
+        //extentLogger.info("Navigate to the Contacts page");
 
+        //create an object from the ContactPage
         ContactsPage contactsPage = new ContactsPage();
 
 
+        // create an string of expected email.
+        //use a different one to show it dynamic "mike.jorden@hotmail.com"
         String expectedEmail="mike.jorden@hotmail.com";
-        extentLogger.info("click on the "+expectedEmail);
+        //extentLogger.info("click on the "+expectedEmail);
+
+        //create and expected string of name.
+        //use a different one to show it dynamic "Mike Jorden"
         String expectedName="Mike Jorden";
+
+        //creare an string of the expected phone number.
+        //use a different one to show it dynamic "7790499876
         String expectedPhoneNumber="7790499876";
 
+        //loading issue is overcome.
         BrowserUtils.waitFor(3);
         contactsPage.clickonemail(expectedEmail);
 
+
+        //Make the assertions
         Assert.assertEquals(contactsPage.name.getText(),expectedName);
-        extentLogger.info("name is the same");
+        //extentLogger.info("Th names are the same as following "+ expectedName+"="+contactsPage.name.getText());
         Assert.assertEquals(contactsPage.email.getText(),expectedEmail);
-        extentLogger.info("email is the same");
+        //extentLogger.info("The emails are the same as following "+ expectedEmail+"="+ contactsPage.email.getText());
         Assert.assertEquals(contactsPage.phone.getText(),expectedPhoneNumber);
-        extentLogger.info("phone number is the same");
-        extentLogger.info("Passed");
+        //extentLogger.info("The phone numbers are the same as following "+ expectedPhoneNumber+"="+contactsPage.phone.getText());
+        //extentLogger.info("Passed");
 
     }
 

@@ -22,7 +22,6 @@ public class ContactsPage extends BasePage  {
 //    public WebElement email1;
 
 
-
     public void clickonemail(String email) {
         WebElement element = Driver.get().findElement(By.xpath("//td[text()='"+email+"']"));
         BrowserUtils.waitForClickablility(element,5);
